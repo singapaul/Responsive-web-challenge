@@ -1,0 +1,105 @@
+.grid {
+  display: grid;
+  // grd template is for defining set template
+  // grid-template-rows: repeat(9, 1fr);
+  // shorthand for 1fr 1fr 1fr 1fr 1fr e.t.c 
+  // grid-template-columns: repeat(9, 1fr);
+  grid: repeat(9, 1fr) / auto-flow;
+  gap: 5%;
+  width:50%;
+  height: 50vh;
+
+  &__header {
+    background-color: black;
+    color: white;
+    grid-area: 1/1/2/9;
+  }
+
+  // &__aside{background-color: orange;
+  //   color: white;
+  // grid-area: 8/1/9/9;}
+
+  &__nav{
+    background-color:#F7BC7D;
+    color: white;
+    grid-area: 2/1/3/9;
+  }
+
+  &__main{background-color: #D6D6D6;
+    color: white; 
+    grid-area: 3/1/7/9;
+  }
+
+
+  &__footer {
+    background-color: black;
+    color: white;
+    grid-area: 7/1/8/9;
+  }
+
+}
+
+
+
+
+
+.look {
+  border: solid 2px black;
+}
+
+.grid__aside {
+  display: none;
+
+}
+
+
+// styling when the screen size goes up
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+
+  .grid__aside{display:block;}
+
+
+  .grid {
+
+    &__header {
+      background-color: black;
+      color: white;
+      grid-area: 1/1/3/9;
+  
+    }
+  
+    &__footer {
+      background-color: black;
+      color: white;
+      grid-area: 8/1/9/9;
+    }
+  
+    &__nav{
+      background-color:#F7BC7D;
+      color: white;
+      grid-area: 3/4/4/9;
+    }
+  
+    &__main{background-color: #D6D6D6;
+      color: white; 
+      grid-area: 4/4 /8/9;
+    }
+  
+    &__aside{background-color: orange;
+    color: white;
+  grid-area: 3/1/8/4;
+}
+}
+
+
+
+
+
+
+
+}
+
